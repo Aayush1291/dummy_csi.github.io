@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Actuator Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p#result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            input[type="text"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function checkAnswer() {
+            var enteredText = document.getElementById("answer").value;
+            var answer = "Movement"; // Correct answer
+
+            if (enteredText.trim().toLowerCase() === answer.toLowerCase()) {
+                document.getElementById("result").innerHTML = "Correct";
+            } else {
+                document.getElementById("result").innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>What is the primary function of an actuator in a robot?</h1>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Check Answer</button>
+    <p id="result"></p>
+</body>
+</html>
